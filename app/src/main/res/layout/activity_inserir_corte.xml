@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".inserirCorte">
+
+
+
+    <View
+        android:id="@+id/menuInserirCorte"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintBottom_toTopOf="@id/linhaDivisoriaImpressao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/linhaDivisoriaImpressao"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/blue_claro"
+        app:layout_constraintBottom_toTopOf="@id/menuInserirCorte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menuInserirCorte" />
+
+    <EditText
+        android:id="@+id/inserirProdutoCorte1"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="Insira o produto aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linhaDivisoriaImpressao"
+        app:layout_constraintWidth_percent="0.495"
+
+        />
+    <EditText
+        android:id="@+id/inserirProdutoCorte2"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="Insira o produto aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inserirProdutoCorte1"
+        app:layout_constraintWidth_percent="0.495"
+
+        />
+    <EditText
+        android:id="@+id/inserirProdutoCorte3"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="Insira o produto aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inserirProdutoCorte2"
+        app:layout_constraintWidth_percent="0.495"
+
+        />
+    <EditText
+        android:id="@+id/inserirProdutoCorte4"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="Insira o produto aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inserirProdutoCorte3"
+        app:layout_constraintWidth_percent="0.495"
+
+        />
+    <EditText
+        android:id="@+id/inserirProdutoCorte5"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="Insira o produto aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inserirProdutoCorte4"
+        app:layout_constraintWidth_percent="0.495"
+
+        />
+    <EditText
+        android:id="@+id/inserirProdutoCorte6"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="Insira o produto aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inserirProdutoCorte5"
+        app:layout_constraintWidth_percent="0.495"
+
+        />
+    <EditText
+        android:id="@+id/inserirProdutoCorte7"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:hint="Insira o produto aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inserirProdutoCorte6"
+        app:layout_constraintWidth_percent="0.495"
+
+        />
+    <EditText
+        android:id="@+id/inserirProdutoCorte8"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="Insira o produto aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inserirProdutoCorte7"
+        app:layout_constraintWidth_percent="0.495"
+
+        />
+
+    <Button
+        android:id="@+id/botaoConfirmarCorte1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        app:layout_constraintBottom_toBottomOf="@id/inserirProdutoCorte1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inserirProdutoCorte1"
+        app:layout_constraintTop_toTopOf="@id/inserirProdutoCorte1" />
+
+    <Button
+        android:id="@+id/botaoConfirmarCorte2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        app:layout_constraintBottom_toBottomOf="@id/inserirProdutoCorte2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inserirProdutoCorte2"
+        app:layout_constraintTop_toTopOf="@id/inserirProdutoCorte2" />
+
+    <Button
+        android:id="@+id/botaoConfirmarCorte3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        app:layout_constraintBottom_toBottomOf="@id/inserirProdutoCorte3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inserirProdutoCorte3"
+        app:layout_constraintTop_toTopOf="@id/inserirProdutoCorte3" />
+
+    <Button
+        android:id="@+id/botaoConfirmarCorte4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        app:layout_constraintBottom_toBottomOf="@id/inserirProdutoCorte4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inserirProdutoCorte4"
+        app:layout_constraintTop_toTopOf="@id/inserirProdutoCorte4" />
+
+    <Button
+        android:id="@+id/botaoConfirmarCorte5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        app:layout_constraintBottom_toBottomOf="@id/inserirProdutoCorte5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inserirProdutoCorte5"
+        app:layout_constraintTop_toTopOf="@id/inserirProdutoCorte5" />
+
+    <Button
+        android:id="@+id/botaoConfirmarCorte6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        app:layout_constraintBottom_toBottomOf="@id/inserirProdutoCorte6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inserirProdutoCorte6"
+        app:layout_constraintTop_toTopOf="@id/inserirProdutoCorte6" />
+
+    <Button
+        android:id="@+id/botaoConfirmarCorte7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        app:layout_constraintBottom_toBottomOf="@id/inserirProdutoCorte7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inserirProdutoCorte7"
+        app:layout_constraintTop_toTopOf="@id/inserirProdutoCorte7" />
+
+    <Button
+        android:id="@+id/botaoConfirmarCorte8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        app:layout_constraintBottom_toBottomOf="@id/inserirProdutoCorte8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inserirProdutoCorte8"
+        app:layout_constraintTop_toTopOf="@id/inserirProdutoCorte8" />
+
+    <Button
+        android:id="@+id/botaoConfirmarCorte9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        app:layout_constraintTop_toBottomOf="@id/inserirProdutoCorte8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+    />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

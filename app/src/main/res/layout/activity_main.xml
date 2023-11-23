@@ -44,41 +44,47 @@
         style="@style/TextViewStyle"
         android:text="@string/funcionario_1"
         app:layout_constraintBottom_toTopOf="@id/funcionario2"
-        app:layout_constraintTop_toBottomOf="@id/linhaDivisoria" />
+        app:layout_constraintTop_toBottomOf="@id/linhaDivisoria"
+        android:layout_marginStart="3dp"/>
 
     <TextView
         android:id="@+id/funcionario2"
         style="@style/TextViewStyle"
         android:text="@string/funcionario_2"
         app:layout_constraintBottom_toTopOf="@id/funcionario3"
-        app:layout_constraintTop_toBottomOf="@id/funcionario1" />
+        app:layout_constraintTop_toBottomOf="@id/funcionario1"
+        android:layout_marginStart="3dp"/>
 
     <TextView
         android:id="@+id/funcionario3"
         style="@style/TextViewStyle"
         android:text="@string/funcionario_3"
         app:layout_constraintBottom_toTopOf="@id/funcionario4"
-        app:layout_constraintTop_toBottomOf="@id/funcionario2" />
+        app:layout_constraintTop_toBottomOf="@id/funcionario2"
+        android:layout_marginStart="3dp"/>
 
     <TextView
         android:id="@+id/funcionario4"
         style="@style/TextViewStyle"
         android:text="@string/funcionario_4"
         app:layout_constraintBottom_toTopOf="@id/funcionario5"
-        app:layout_constraintTop_toBottomOf="@id/funcionario3" />
+        app:layout_constraintTop_toBottomOf="@id/funcionario3"
+        android:layout_marginStart="3dp"/>
 
     <TextView
         android:id="@+id/funcionario5"
         style="@style/TextViewStyle"
         android:text="@string/funcionario_5"
         app:layout_constraintBottom_toTopOf="@id/funcionario6"
-        app:layout_constraintTop_toBottomOf="@id/funcionario4" />
+        app:layout_constraintTop_toBottomOf="@id/funcionario4"
+        android:layout_marginStart="3dp"/>
 
     <TextView
         android:id="@+id/funcionario6"
         style="@style/TextViewStyle"
         android:text="@string/funcionario_6"
-        app:layout_constraintTop_toBottomOf="@id/funcionario5" />
+        app:layout_constraintTop_toBottomOf="@id/funcionario5"
+        android:layout_marginStart="3dp"/>
 
 
     <TextView
@@ -88,6 +94,7 @@
         app:layout_constraintBottom_toBottomOf="@id/funcionario1"
         app:layout_constraintStart_toEndOf="@id/funcionario1"
         app:layout_constraintTop_toTopOf="@id/funcionario1"
+        android:layout_marginEnd="3dp"
 
 
         />
@@ -99,6 +106,7 @@
         app:layout_constraintBottom_toBottomOf="@id/funcionario2"
         app:layout_constraintStart_toEndOf="@id/funcionario2"
         app:layout_constraintTop_toTopOf="@id/funcionario2"
+        android:layout_marginEnd="3dp"
 
 
         />
@@ -110,6 +118,7 @@
         app:layout_constraintBottom_toBottomOf="@id/funcionario3"
         app:layout_constraintStart_toEndOf="@id/funcionario3"
         app:layout_constraintTop_toTopOf="@id/funcionario3"
+        android:layout_marginEnd="3dp"
 
         />
 
@@ -120,6 +129,7 @@
         app:layout_constraintBottom_toBottomOf="@id/funcionario4"
         app:layout_constraintStart_toEndOf="@id/funcionario4"
         app:layout_constraintTop_toTopOf="@id/funcionario4"
+        android:layout_marginEnd="3dp"
 
         />
 
@@ -130,6 +140,7 @@
         app:layout_constraintBottom_toBottomOf="@id/funcionario5"
         app:layout_constraintStart_toEndOf="@id/funcionario5"
         app:layout_constraintTop_toTopOf="@id/funcionario5"
+        android:layout_marginEnd="3dp"
 
         />
 
@@ -140,6 +151,7 @@
         app:layout_constraintBottom_toBottomOf="@id/funcionario6"
         app:layout_constraintStart_toEndOf="@id/funcionario6"
         app:layout_constraintTop_toTopOf="@id/funcionario6"
+        android:layout_marginEnd="3dp"
 
         />
 
