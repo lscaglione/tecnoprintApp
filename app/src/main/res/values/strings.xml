@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">app4</string>
+    <string name="funcionario_1">Funcionario 1</string>
+    <string name="funcionario_2">Funcionario 2</string>
+    <string name="funcionario_3">Funcionario 3</string>
+    <string name="funcionario_4">Funcionario 4</string>
+    <string name="funcionario_5">Funcionario 5</string>
+    <string name="funcionario_6">Funcionario 6</string>
+</resources>

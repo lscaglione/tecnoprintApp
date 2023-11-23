@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextViewStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="paddingStart">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:gravity">center</item>
+        <item name ="layout_constraintEnd_toEndOf">parent</item>
+        <item name ="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintWidth_percent">0.495</item>
+        <item name="layout_constraintHorizontal_bias">0.0</item>
+        <item name="android:background">@drawable/rounded_background_white</item>
+    </style>
+
+    <style name="TextViewStyleProdutos">
+        <item name="android:layout_width">0dp</item><!-- Borda arredondada -->
+        <item name="android:layout_height">40dp</item><!-- Borda arredondada -->
+        <item name="paddingEnd">10dp</item><!-- Borda arredondada -->
+        <item name="android:textSize">20sp</item><!-- Borda arredondada -->
+        <item name="android:gravity">center</item><!-- Borda arredondada -->
+        <item name ="layout_constraintEnd_toEndOf">parent</item><!-- Borda arredondada -->
+        <item name="layout_constraintWidth_percent">0.495</item><!-- Borda arredondada -->
+        <item name="layout_constraintHorizontal_bias">1.0</item><!-- Borda arredondada -->
+        <item name="android:background">@drawable/rounded_background_white</item><!-- Borda arredondada -->
+
+    </style>
+</resources>
