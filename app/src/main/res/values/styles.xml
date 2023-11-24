@@ -11,7 +11,9 @@
         <item name ="layout_constraintStart_toStartOf">parent</item>
         <item name="layout_constraintWidth_percent">0.485</item>
         <item name="layout_constraintHorizontal_bias">0.0</item>
-        <item name="android:background">@drawable/rounded_background_white</item>
+        <item name="android:background">@drawable/rounded_bacgkround_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="TextViewStyleProdutos">
@@ -34,5 +36,20 @@
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/rounded_background_white</item>
         <item name="android:layout_marginEnd">2dp</item>
+    </style>
+
+    <style name="TextViewStyleProdutosBlue">
+        <item name="android:layout_width">0dp</item><!-- Borda arredondada -->
+        <item name="android:layout_height">40dp</item><!-- Borda arredondada -->
+        <item name="paddingEnd">10dp</item><!-- Borda arredondada -->
+        <item name="android:textSize">20sp</item><!-- Borda arredondada -->
+        <item name="android:gravity">center</item><!-- Borda arredondada -->
+        <item name ="layout_constraintEnd_toEndOf">parent</item><!-- Borda arredondada -->
+        <item name="layout_constraintWidth_percent">0.485</item><!-- Borda arredondada -->
+        <item name="layout_constraintHorizontal_bias">1.0</item><!-- Borda arredondada -->
+        <item name="android:background">@drawable/rounded_bacgkround_blue</item><!-- Borda arredondada -->
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+
     </style>
 </resources>

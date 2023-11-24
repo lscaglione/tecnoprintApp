@@ -22,7 +22,7 @@
             android:name=".inserirImpressao"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".menuImpressao"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".menuImpressao">
 
 
     <View
-        android:id="@+id/menu"
+        android:id="@+id/menuImpressao"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/rounded_background"
@@ -22,22 +22,23 @@
         android:id="@+id/linhaDivisoria"
         android:layout_width="0dp"
         android:layout_height="2dp"
-        android:background="@color/blue_claro"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@id/funcionario1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/menu" />
+        app:layout_constraintTop_toBottomOf="@id/menuImpressao" />
 
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="IMPRESSÃO"
         android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="@id/menu"
-        app:layout_constraintEnd_toEndOf="@id/menu"
-        app:layout_constraintStart_toStartOf="@id/menu"
-        app:layout_constraintTop_toTopOf="@id/menu" />
+        app:layout_constraintBottom_toBottomOf="@id/menuImpressao"
+        app:layout_constraintEnd_toEndOf="@id/menuImpressao"
+        app:layout_constraintStart_toStartOf="@id/menuImpressao"
+        app:layout_constraintTop_toTopOf="@id/menuImpressao" />
 
     <TextView
         android:id="@+id/funcionario1"
@@ -89,19 +90,18 @@
 
     <TextView
         android:id="@+id/produto1"
-        style="@style/TextViewStyleProdutos"
-        android:text="Produto1"
+        style="@style/TextViewStyleProdutosBlue"
+        android:text="Produto 1"
         app:layout_constraintBottom_toBottomOf="@id/funcionario1"
         app:layout_constraintStart_toEndOf="@id/funcionario1"
         app:layout_constraintTop_toTopOf="@id/funcionario1"
         android:layout_marginEnd="3dp"
 
-
         />
 
     <TextView
         android:id="@+id/produto2"
-        style="@style/TextViewStyleProdutos"
+        style="@style/TextViewStyleProdutosBlue"
         android:text="Produto2"
         app:layout_constraintBottom_toBottomOf="@id/funcionario2"
         app:layout_constraintStart_toEndOf="@id/funcionario2"
@@ -113,7 +113,7 @@
 
     <TextView
         android:id="@+id/produto3"
-        style="@style/TextViewStyleProdutos"
+        style="@style/TextViewStyleProdutosBlue"
         android:text="Produto3"
         app:layout_constraintBottom_toBottomOf="@id/funcionario3"
         app:layout_constraintStart_toEndOf="@id/funcionario3"
@@ -124,7 +124,7 @@
 
     <TextView
         android:id="@+id/produto4"
-        style="@style/TextViewStyleProdutos"
+        style="@style/TextViewStyleProdutosBlue"
         android:text="Produto4"
         app:layout_constraintBottom_toBottomOf="@id/funcionario4"
         app:layout_constraintStart_toEndOf="@id/funcionario4"
@@ -135,7 +135,7 @@
 
     <TextView
         android:id="@+id/produto5"
-        style="@style/TextViewStyleProdutos"
+        style="@style/TextViewStyleProdutosBlue"
         android:text="Produto5"
         app:layout_constraintBottom_toBottomOf="@id/funcionario5"
         app:layout_constraintStart_toEndOf="@id/funcionario5"
@@ -146,7 +146,7 @@
 
     <TextView
         android:id="@+id/produto6"
-        style="@style/TextViewStyleProdutos"
+        style="@style/TextViewStyleProdutosBlue"
         android:text="Produto6"
         app:layout_constraintBottom_toBottomOf="@id/funcionario6"
         app:layout_constraintStart_toEndOf="@id/funcionario6"
@@ -161,19 +161,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Clique"
-        app:layout_constraintEnd_toStartOf="@id/produto6"
+        app:layout_constraintEnd_toStartOf="@id/botao2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/funcionario6" />
+        app:layout_constraintTop_toBottomOf="@id/funcionario6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/blue"
+        />
 
     <Button
         android:id="@+id/botao2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:text="Clique"
+        app:layout_constraintTop_toTopOf="@id/botao1"
+        app:layout_constraintBottom_toBottomOf="@id/botao1"
+        app:layout_constraintStart_toEndOf="@id/botao1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/funcionario6"
-        app:layout_constraintTop_toBottomOf="@id/produto6" />
+        android:backgroundTint="@color/blue"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
