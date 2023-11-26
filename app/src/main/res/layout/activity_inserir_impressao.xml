@@ -12,63 +12,68 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@drawable/rounded_background"
-        app:layout_constraintBottom_toTopOf="@id/inserirProdutoImpressao"
+        app:layout_constraintBottom_toTopOf="@id/selecionarFuncionario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/maquina1"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        style="@style/TextViewStyleProdutosBlue"
-        android:text="Maquina 1"
+    <EditText
+        android:id="@+id/selecionarFuncionario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Selecione o funcionario"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/menuInserirImpressao"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/inserirProdutoImpressao"
-        app:layout_constraintBottom_toBottomOf="@id/inserirProdutoImpressao"
-        app:layout_constraintTop_toTopOf="@id/inserirProdutoImpressao"
-        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
 
         />
 
-
     <EditText
-        android:id="@+id/inserirProdutoImpressao"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="30dp"
-        android:hint="Produto"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/maquina1"
-        app:layout_constraintTop_toBottomOf="@id/menuInserirImpressao"
-        app:layout_constraintEnd_toStartOf="@id/botaoConfirmar"
-        android:layout_marginEnd="30dp"
+        android:id="@+id/selecionarProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Selecione o produto"
+        app:layout_constraintTop_toBottomOf="@id/selecionarFuncionario"
+        android:layout_marginTop="50dp"
+        />
 
-
+    <AutoCompleteTextView
+        android:id="@+id/selecionarMaquina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Selecione a máquina"
+        app:layout_constraintTop_toBottomOf="@id/selecionarProduto"
+        android:layout_marginTop="50dp"
         />
 
     <Button
         android:id="@+id/botaoConfirmar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue"
         android:text="Confirmar"
-        app:layout_constraintBottom_toBottomOf="@id/inserirProdutoImpressao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/inserirProdutoImpressao"
-        app:layout_constraintTop_toTopOf="@id/inserirProdutoImpressao" />
+        android:backgroundTint="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/selecionarMaquina"
+        android:layout_marginTop="50dp"
+        />
+
 
     <Button
         android:id="@+id/botaoTelaInicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:backgroundTint="@color/blue"
-        android:text="Tela Inicial"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Tela inicial"
+        app:layout_constraintTop_toBottomOf="@id/botaoConfirmar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inserirProdutoImpressao" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
