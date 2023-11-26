@@ -11,11 +11,11 @@
     <View
         android:id="@+id/menuImpressao"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="70dp"
         android:background="@drawable/rounded_background"
         app:layout_constraintBottom_toTopOf="@id/linhaDivisoria"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/menuImpressao"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -32,81 +32,98 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:text="Impressão"
         android:textColor="@color/white"
-        android:text="IMPRESSÃO"
-        android:textSize="50sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@id/menuImpressao"
         app:layout_constraintEnd_toEndOf="@id/menuImpressao"
+        app:layout_constraintTop_toTopOf="@id/menuImpressao"
+
+        />
+
+    <TextView
+        android:id="@+id/titulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:text="TecnoPrint"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/menuImpressao"
+        app:layout_constraintTop_toTopOf="@id/menuImpressao"
         app:layout_constraintStart_toStartOf="@id/menuImpressao"
-        app:layout_constraintTop_toTopOf="@id/menuImpressao" />
+
+
+        />
 
     <TextView
         android:id="@+id/funcionario1"
         style="@style/TextViewStyle"
+        android:layout_marginStart="3dp"
         android:text="@string/funcionario_1"
         app:layout_constraintBottom_toTopOf="@id/funcionario2"
-        app:layout_constraintTop_toBottomOf="@id/linhaDivisoria"
-        android:layout_marginStart="3dp"/>
+        app:layout_constraintTop_toBottomOf="@id/linhaDivisoria" />
 
     <TextView
         android:id="@+id/funcionario2"
         style="@style/TextViewStyle"
+        android:layout_marginStart="3dp"
         android:text="@string/funcionario_2"
         app:layout_constraintBottom_toTopOf="@id/funcionario3"
-        app:layout_constraintTop_toBottomOf="@id/funcionario1"
-        android:layout_marginStart="3dp"/>
+        app:layout_constraintTop_toBottomOf="@id/funcionario1" />
 
     <TextView
         android:id="@+id/funcionario3"
         style="@style/TextViewStyle"
+        android:layout_marginStart="3dp"
         android:text="@string/funcionario_3"
         app:layout_constraintBottom_toTopOf="@id/funcionario4"
-        app:layout_constraintTop_toBottomOf="@id/funcionario2"
-        android:layout_marginStart="3dp"/>
+        app:layout_constraintTop_toBottomOf="@id/funcionario2" />
 
     <TextView
         android:id="@+id/funcionario4"
         style="@style/TextViewStyle"
+        android:layout_marginStart="3dp"
         android:text="@string/funcionario_4"
         app:layout_constraintBottom_toTopOf="@id/funcionario5"
-        app:layout_constraintTop_toBottomOf="@id/funcionario3"
-        android:layout_marginStart="3dp"/>
+        app:layout_constraintTop_toBottomOf="@id/funcionario3" />
 
     <TextView
         android:id="@+id/funcionario5"
         style="@style/TextViewStyle"
+        android:layout_marginStart="3dp"
         android:text="@string/funcionario_5"
         app:layout_constraintBottom_toTopOf="@id/funcionario6"
-        app:layout_constraintTop_toBottomOf="@id/funcionario4"
-        android:layout_marginStart="3dp"/>
+        app:layout_constraintTop_toBottomOf="@id/funcionario4" />
 
     <TextView
         android:id="@+id/funcionario6"
         style="@style/TextViewStyle"
+        android:layout_marginStart="3dp"
         android:text="@string/funcionario_6"
-        app:layout_constraintTop_toBottomOf="@id/funcionario5"
-        android:layout_marginStart="3dp"/>
+        app:layout_constraintTop_toBottomOf="@id/funcionario5" />
 
 
     <TextView
         android:id="@+id/produto1"
         style="@style/TextViewStyleProdutosBlue"
+        android:layout_marginEnd="3dp"
         android:text="Produto 1"
         app:layout_constraintBottom_toBottomOf="@id/funcionario1"
         app:layout_constraintStart_toEndOf="@id/funcionario1"
         app:layout_constraintTop_toTopOf="@id/funcionario1"
-        android:layout_marginEnd="3dp"
 
         />
 
     <TextView
         android:id="@+id/produto2"
         style="@style/TextViewStyleProdutosBlue"
+        android:layout_marginEnd="3dp"
         android:text="Produto2"
         app:layout_constraintBottom_toBottomOf="@id/funcionario2"
         app:layout_constraintStart_toEndOf="@id/funcionario2"
         app:layout_constraintTop_toTopOf="@id/funcionario2"
-        android:layout_marginEnd="3dp"
 
 
         />
@@ -114,44 +131,44 @@
     <TextView
         android:id="@+id/produto3"
         style="@style/TextViewStyleProdutosBlue"
+        android:layout_marginEnd="3dp"
         android:text="Produto3"
         app:layout_constraintBottom_toBottomOf="@id/funcionario3"
         app:layout_constraintStart_toEndOf="@id/funcionario3"
         app:layout_constraintTop_toTopOf="@id/funcionario3"
-        android:layout_marginEnd="3dp"
 
         />
 
     <TextView
         android:id="@+id/produto4"
         style="@style/TextViewStyleProdutosBlue"
+        android:layout_marginEnd="3dp"
         android:text="Produto4"
         app:layout_constraintBottom_toBottomOf="@id/funcionario4"
         app:layout_constraintStart_toEndOf="@id/funcionario4"
         app:layout_constraintTop_toTopOf="@id/funcionario4"
-        android:layout_marginEnd="3dp"
 
         />
 
     <TextView
         android:id="@+id/produto5"
         style="@style/TextViewStyleProdutosBlue"
+        android:layout_marginEnd="3dp"
         android:text="Produto5"
         app:layout_constraintBottom_toBottomOf="@id/funcionario5"
         app:layout_constraintStart_toEndOf="@id/funcionario5"
         app:layout_constraintTop_toTopOf="@id/funcionario5"
-        android:layout_marginEnd="3dp"
 
         />
 
     <TextView
         android:id="@+id/produto6"
         style="@style/TextViewStyleProdutosBlue"
+        android:layout_marginEnd="3dp"
         android:text="Produto6"
         app:layout_constraintBottom_toBottomOf="@id/funcionario6"
         app:layout_constraintStart_toEndOf="@id/funcionario6"
         app:layout_constraintTop_toTopOf="@id/funcionario6"
-        android:layout_marginEnd="3dp"
 
         />
 
@@ -160,25 +177,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Clique"
-        app:layout_constraintEnd_toStartOf="@id/botao2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/funcionario6"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:backgroundTint="@color/blue"
-        />
+        android:text="Inserir Impressao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/botao2"
+        app:layout_constraintStart_toEndOf="@id/botao3"
+        app:layout_constraintTop_toBottomOf="@id/funcionario6" />
 
     <Button
         android:id="@+id/botao2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clique"
+        android:backgroundTint="@color/blue"
+        android:text="Inserir corte"
+        app:layout_constraintBottom_toBottomOf="@id/botao1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/botao1"
+        app:layout_constraintTop_toTopOf="@id/botao1" />
+
+    <Button
+        android:id="@+id/botao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu corte"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/botao1"
         app:layout_constraintTop_toTopOf="@id/botao1"
         app:layout_constraintBottom_toBottomOf="@id/botao1"
-        app:layout_constraintStart_toEndOf="@id/botao1"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/blue"
         />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
