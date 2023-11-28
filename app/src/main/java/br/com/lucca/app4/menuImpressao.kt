@@ -4,9 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.AutoCompleteTextView
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 
 class menuImpressao : AppCompatActivity() {
@@ -61,5 +59,8 @@ class menuImpressao : AppCompatActivity() {
             val intent = Intent(this, menuCorte::class.java)
             startActivity(intent)
         }
+
+
+
     }
 }

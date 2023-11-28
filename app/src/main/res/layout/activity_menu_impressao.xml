@@ -1,423 +1,494 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".menuImpressao"
-    >
+    android:background="#01040c">
 
-
-    <View
-        android:id="@+id/menuImpressao"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/blue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/view1"
-        android:layout_width="180dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/backgroud_teste"
-        app:layout_constraintBottom_toTopOf="@id/view2"
-        app:layout_constraintEnd_toStartOf="@id/view4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/menuImpressao"
-        android:backgroundTint="@color/blue"
-
-
-        />
-
-    <TextView
-        android:id="@+id/tituloTecnoprint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TecnoPrint"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/menuImpressao"
-        app:layout_constraintTop_toTopOf="@id/menuImpressao"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="10dp"
-        />
-
-    <TextView
-        android:id="@+id/tituloImpressao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Impressão"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/menuImpressao"
-        app:layout_constraintTop_toTopOf="@id/menuImpressao"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="10dp"
-
-        />
-
-    <TextView
-        android:id="@+id/funcionario1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Lucca"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/maquina1"
-        app:layout_constraintStart_toStartOf="@id/view1"
-        app:layout_constraintTop_toTopOf="@id/view1"
-
-        />
-
-    <TextView
-        android:id="@+id/maquina1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Maquina 1"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/view1"
-        app:layout_constraintStart_toStartOf="@id/view1"
-        app:layout_constraintTop_toBottomOf="@id/funcionario1"
-
-
-        />
-
-
-    <TextView
-        android:id="@+id/produto1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:textColor="@color/white"
-        android:text="58x30"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/view1"
-        app:layout_constraintEnd_toEndOf="@id/view1"
-        app:layout_constraintTop_toTopOf="@id/view1" />
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="180dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/backgroud_teste"
-        app:layout_constraintBottom_toTopOf="@id/view3"
-        app:layout_constraintEnd_toStartOf="@id/view5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view1"
-        android:backgroundTint="@color/blue"
-
-
-        />
-
-    <TextView
-        android:id="@+id/funcionario2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Lucca"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/maquina2"
-        app:layout_constraintStart_toStartOf="@id/view2"
-        app:layout_constraintTop_toTopOf="@id/view2"
-
-        />
-
-    <TextView
-        android:id="@+id/maquina2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="Maquina 2"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/view2"
-        app:layout_constraintStart_toStartOf="@id/view2"
-        app:layout_constraintTop_toBottomOf="@id/funcionario2"
-
-
-        />
-
-
-    <TextView
-        android:id="@+id/produto2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:text="58x30"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/view2"
-        app:layout_constraintEnd_toEndOf="@id/view2"
-        app:layout_constraintTop_toTopOf="@id/view2" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="180dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/backgroud_teste"
-        app:layout_constraintEnd_toStartOf="@id/view6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:backgroundTint="@color/blue"
-
-
-        />
-
-    <TextView
-        android:id="@+id/funcionario3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Lucca"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/maquina3"
-        app:layout_constraintStart_toStartOf="@id/view3"
-        app:layout_constraintTop_toTopOf="@id/view3"
-
-        />
-
-    <TextView
-        android:id="@+id/maquina3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Maquina 1"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/view3"
-        app:layout_constraintStart_toStartOf="@id/view3"
-        app:layout_constraintTop_toBottomOf="@id/funcionario3"
-
-
-        />
-
-
-    <TextView
-        android:id="@+id/produto3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:textColor="@color/white"
-        android:text="58x30"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/view3"
-        app:layout_constraintEnd_toEndOf="@id/view3"
-        app:layout_constraintTop_toTopOf="@id/view3" />
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="180dp"
-        android:layout_height="100dp"
-        android:background="@drawable/backgroud_teste"
-        app:layout_constraintBottom_toBottomOf="@id/view1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/view1"
-        app:layout_constraintTop_toTopOf="@id/view1"
-        android:backgroundTint="@color/blue"/>
-
-    <TextView
-        android:id="@+id/funcionario4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Lucca"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/maquina4"
-        app:layout_constraintStart_toStartOf="@id/view4"
-        app:layout_constraintTop_toTopOf="@id/view4"
-
-        />
-
-    <TextView
-        android:id="@+id/maquina4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Maquina 1"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/view4"
-        app:layout_constraintStart_toStartOf="@id/view4"
-        app:layout_constraintTop_toBottomOf="@id/funcionario4"
-
-
-        />
-
-
-    <TextView
-        android:id="@+id/produto4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:textColor="@color/white"
-        android:text="58x30"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/view4"
-        app:layout_constraintEnd_toEndOf="@id/view4"
-        app:layout_constraintTop_toTopOf="@id/view4" />
-
-    <View
-        android:id="@+id/view5"
-        android:layout_width="180dp"
-        android:layout_height="100dp"
-        android:background="@drawable/backgroud_teste"
-        app:layout_constraintBottom_toBottomOf="@id/view2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/view2"
-        app:layout_constraintTop_toTopOf="@id/view2"
-        android:backgroundTint="@color/blue"
-
-
-        />
-
-    <TextView
-        android:id="@+id/funcionario5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Lucca"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/maquina5"
-        app:layout_constraintStart_toStartOf="@id/view5"
-        app:layout_constraintTop_toTopOf="@id/view5"
-
-        />
-
-    <TextView
-        android:id="@+id/maquina5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Maquina 1"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/view5"
-        app:layout_constraintStart_toStartOf="@id/view5"
-        app:layout_constraintTop_toBottomOf="@id/funcionario5"
-
-
-        />
-
-
-    <TextView
-        android:id="@+id/produto5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:textColor="@color/white"
-        android:text="58x30"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/view5"
-        app:layout_constraintEnd_toEndOf="@id/view5"
-        app:layout_constraintTop_toTopOf="@id/view5" />
-
-    <View
-        android:id="@+id/view6"
-        android:layout_width="180dp"
-        android:layout_height="100dp"
-        android:background="@drawable/backgroud_teste"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/view3"
-        app:layout_constraintTop_toTopOf="@id/view3"
-        android:backgroundTint="@color/blue"
-
-
-        />
-
-    <TextView
-        android:id="@+id/funcionario6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Lucca"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/maquina6"
-        app:layout_constraintStart_toStartOf="@id/view6"
-        app:layout_constraintTop_toTopOf="@id/view6"
-
-        />
-
-    <TextView
-        android:id="@+id/maquina6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:textColor="@color/white"
-        android:text="Maquina 1"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/view6"
-        app:layout_constraintStart_toStartOf="@id/view6"
-        app:layout_constraintTop_toBottomOf="@id/funcionario6"
-
-
-        />
-
-
-    <TextView
-        android:id="@+id/produto6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:textColor="@color/white"
-        android:text="58x30"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@id/view6"
-        app:layout_constraintEnd_toEndOf="@id/view6"
-        app:layout_constraintTop_toTopOf="@id/view6" />
-
-    <Button
-        android:id="@+id/botaoInserirImpressao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Inserir impressao"
-        android:backgroundTint="@color/blue"
-        app:layout_constraintTop_toBottomOf="@id/view3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/botaoInserirCorte"
-        />
-
-    <Button
-        android:id="@+id/botaoInserirCorte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Inserir Corte"
-        android:backgroundTint="@color/blue"
-        app:layout_constraintTop_toTopOf="@id/botaoInserirImpressao"
-        app:layout_constraintStart_toEndOf="@id/botaoInserirImpressao"
-        app:layout_constraintBottom_toBottomOf="@id/botaoInserirImpressao"
-        app:layout_constraintEnd_toStartOf="@id/botaoMenuCorte"
-        />
-
-    <Button
-        android:id="@+id/botaoMenuCorte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Menu corte"
-        android:backgroundTint="@color/blue"
-        app:layout_constraintTop_toTopOf="@id/botaoInserirCorte"
-        app:layout_constraintStart_toEndOf="@id/botaoInserirCorte"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/botaoInserirImpressao"
-
-        />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tituloImpressao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:text="Impressões"
+            android:textColor="#a7a9b0"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/linha1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/linha2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/botaoMenuCorte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="Menu de Cortes"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/tituloImpressao"
+            app:layout_constraintEnd_toStartOf="@id/linha2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tituloImpressao" />
+
+        <View
+            android:id="@+id/linha1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="#C0BEBE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tituloImpressao" />
+
+        <View
+            android:id="@+id/linha2"
+            android:layout_width="1dp"
+            android:layout_height="80dp"
+            android:background="#C0BEBE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/linha1"
+
+            />
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/rounded_backgournd_white_black"
+            android:backgroundTint="#191c25"
+            app:layout_constraintBottom_toTopOf="@id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linha1" />
+
+
+        <TextView
+            android:id="@+id/produto1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Produto 1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/funcionario1"
+            app:layout_constraintEnd_toEndOf="@id/view1"
+            app:layout_constraintStart_toEndOf="@id/imagem"
+            app:layout_constraintTop_toTopOf="@id/view1" />
+
+        <TextView
+            android:id="@+id/funcionario1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Funcionario"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/maquina1"
+            app:layout_constraintEnd_toEndOf="@id/view1"
+            app:layout_constraintStart_toEndOf="@id/imagem"
+            app:layout_constraintTop_toBottomOf="@id/produto1"
+
+            />
+
+        <TextView
+            android:id="@+id/maquina1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Maquina: "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/view1"
+            app:layout_constraintEnd_toEndOf="@id/view1"
+            app:layout_constraintStart_toEndOf="@id/imagem"
+            app:layout_constraintTop_toBottomOf="@id/funcionario1"
+
+            />
+
+
+        <ImageView
+            android:id="@+id/imagem"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icone_07"
+            app:layout_constraintBottom_toBottomOf="@id/view1"
+            app:layout_constraintEnd_toStartOf="@id/funcionario1"
+            app:layout_constraintStart_toStartOf="@id/view1"
+            app:layout_constraintTop_toTopOf="@id/view1" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/rounded_backgournd_white_black"
+            android:backgroundTint="#191c25"
+            app:layout_constraintBottom_toTopOf="@id/view3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view1" />
+
+
+        <TextView
+            android:id="@+id/produto2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Produto 2"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/funcionario2"
+            app:layout_constraintEnd_toEndOf="@id/view2"
+            app:layout_constraintStart_toEndOf="@id/imagem2"
+            app:layout_constraintTop_toTopOf="@id/view2" />
+
+        <TextView
+            android:id="@+id/funcionario2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Funcionario "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/maquina2"
+            app:layout_constraintEnd_toEndOf="@id/view2"
+            app:layout_constraintStart_toEndOf="@id/imagem2"
+            app:layout_constraintTop_toBottomOf="@id/produto2"
+
+            />
+
+        <TextView
+            android:id="@+id/maquina2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Maquina 2"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/view2"
+            app:layout_constraintEnd_toEndOf="@id/view2"
+            app:layout_constraintStart_toEndOf="@id/imagem2"
+            app:layout_constraintTop_toBottomOf="@id/funcionario2" />
+
+
+        <ImageView
+            android:id="@+id/imagem2"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icone_07"
+            app:layout_constraintBottom_toBottomOf="@id/view2"
+            app:layout_constraintEnd_toStartOf="@id/funcionario2"
+            app:layout_constraintStart_toStartOf="@id/view2"
+            app:layout_constraintTop_toTopOf="@id/view2" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/rounded_backgournd_white_black"
+            android:backgroundTint="#191c25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view2" />
+
+        <TextView
+            android:id="@+id/produto3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Produto 3"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/funcionario3"
+            app:layout_constraintEnd_toEndOf="@id/view3"
+            app:layout_constraintStart_toEndOf="@id/imagem3"
+            app:layout_constraintTop_toTopOf="@id/view3" />
+
+        <TextView
+            android:id="@+id/funcionario3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Funcionario "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/maquina3"
+            app:layout_constraintEnd_toEndOf="@id/view3"
+            app:layout_constraintStart_toEndOf="@id/imagem3"
+            app:layout_constraintTop_toBottomOf="@id/produto3"
+
+            />
+
+        <TextView
+            android:id="@+id/maquina3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Maquina 3"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/view3"
+            app:layout_constraintEnd_toEndOf="@id/view3"
+            app:layout_constraintStart_toEndOf="@id/imagem3"
+            app:layout_constraintTop_toBottomOf="@id/funcionario3" />
+
+        <ImageView
+            android:id="@+id/imagem3"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icone_07"
+            app:layout_constraintBottom_toBottomOf="@id/view3"
+            app:layout_constraintEnd_toStartOf="@id/funcionario3"
+            app:layout_constraintStart_toStartOf="@id/view3"
+            app:layout_constraintTop_toTopOf="@id/view3" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/rounded_backgournd_white_black"
+            android:backgroundTint="#191c25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view3" />
+
+        <TextView
+            android:id="@+id/protudoTeste4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Produto 4"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/funcionario4"
+            app:layout_constraintEnd_toEndOf="@id/view4"
+            app:layout_constraintStart_toEndOf="@id/imagem4"
+            app:layout_constraintTop_toTopOf="@id/view4"
+
+            />
+
+        <TextView
+            android:id="@+id/funcionario4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Funcionario 4"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/maquina4"
+            app:layout_constraintEnd_toEndOf="@id/view4"
+            app:layout_constraintStart_toEndOf="@id/imagem4"
+            app:layout_constraintTop_toBottomOf="@id/protudoTeste4"
+
+            />
+
+        <TextView
+            android:id="@+id/maquina4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Maquina 4"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/view4"
+            app:layout_constraintEnd_toEndOf="@id/view4"
+            app:layout_constraintStart_toEndOf="@id/imagem4"
+            app:layout_constraintTop_toBottomOf="@id/funcionario4"
+
+            />
+
+        <ImageView
+            android:id="@+id/imagem4"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icone_07"
+            app:layout_constraintBottom_toBottomOf="@id/view4"
+            app:layout_constraintEnd_toStartOf="@id/funcionario4"
+            app:layout_constraintStart_toStartOf="@id/view4"
+            app:layout_constraintTop_toTopOf="@id/view4" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/rounded_backgournd_white_black"
+            android:backgroundTint="#191c25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view4" />
+
+        <TextView
+            android:id="@+id/protudoTeste5"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Produto 5"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/funcionario5"
+            app:layout_constraintEnd_toEndOf="@id/view5"
+            app:layout_constraintStart_toEndOf="@id/imagem5"
+            app:layout_constraintTop_toTopOf="@id/view5"
+
+            />
+
+        <TextView
+            android:id="@+id/funcionario5"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Funcionario 5"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/maquina5"
+            app:layout_constraintEnd_toEndOf="@id/view5"
+            app:layout_constraintStart_toEndOf="@id/imagem5"
+            app:layout_constraintTop_toBottomOf="@id/protudoTeste5"
+
+            />
+
+        <TextView
+            android:id="@+id/maquina5"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Maquina 5"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/view5"
+            app:layout_constraintEnd_toEndOf="@id/view5"
+            app:layout_constraintStart_toEndOf="@id/imagem5"
+            app:layout_constraintTop_toBottomOf="@id/funcionario5"
+
+            />
+
+        <ImageView
+            android:id="@+id/imagem5"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icone_07"
+            app:layout_constraintBottom_toBottomOf="@id/view5"
+            app:layout_constraintEnd_toStartOf="@id/funcionario5"
+            app:layout_constraintStart_toStartOf="@id/view5"
+            app:layout_constraintTop_toTopOf="@id/view5" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_backgournd_white_black"
+            android:backgroundTint="#191c25"
+            app:layout_constraintBottom_toTopOf="@id/botaoInserirImpressao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view5" />
+
+        <TextView
+            android:id="@+id/protudoTeste6"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Produto 6"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/funcionario6"
+            app:layout_constraintEnd_toEndOf="@id/view6"
+            app:layout_constraintStart_toEndOf="@id/imagem6"
+            app:layout_constraintTop_toTopOf="@id/view6" />
+
+        <TextView
+            android:id="@+id/funcionario6"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Funcionario 6"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/maquina6"
+            app:layout_constraintEnd_toEndOf="@id/view6"
+            app:layout_constraintStart_toEndOf="@id/imagem6"
+            app:layout_constraintTop_toBottomOf="@id/protudoTeste6" />
+
+        <TextView
+            android:id="@+id/maquina6"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Maquina 6"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/view6"
+            app:layout_constraintEnd_toEndOf="@id/view6"
+            app:layout_constraintStart_toEndOf="@id/imagem6"
+            app:layout_constraintTop_toBottomOf="@id/funcionario6" />
+
+        <ImageView
+            android:id="@+id/imagem6"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icone_07"
+            app:layout_constraintBottom_toTopOf="@id/botaoInserirImpressao"
+            app:layout_constraintEnd_toStartOf="@id/funcionario6"
+            app:layout_constraintStart_toStartOf="@id/view6"
+            app:layout_constraintTop_toTopOf="@id/view6" />
+
+        <Button
+            android:id="@+id/botaoInserirImpressao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inserir Impressao"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/view6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/botaoInserirCorte"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/botaoInserirCorte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inserir Corte"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            app:layout_constraintTop_toTopOf="@id/botaoInserirImpressao"
+            app:layout_constraintStart_toEndOf="@id/botaoInserirImpressao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/botaoInserirImpressao"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
