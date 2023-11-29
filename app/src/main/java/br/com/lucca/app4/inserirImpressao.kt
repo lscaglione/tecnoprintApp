@@ -16,6 +16,8 @@ import android.widget.Toast
 
 class inserirImpressao : AppCompatActivity() {
 
+
+    // Declaração de variáveis para os elementos da interface do usuário.
     lateinit var editTextFuncionario: EditText
     lateinit var editTextProduto: EditText
     lateinit var botaoConfirma: Button
@@ -25,12 +27,13 @@ class inserirImpressao : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inserir_impressao)
 
-
+        // Inicialização dos elementos da interface com os seus respectivos IDs.
         editTextFuncionario = findViewById(R.id.selecionarFuncionario)
         editTextProduto = findViewById(R.id.selecionarProduto)
         botaoConfirma = findViewById(R.id.botaoConfirmar)
         selecionarMaquina = findViewById(R.id.selecionarMaquina)
 
+        // Chamadas de métodos para a funcionalidade dos botões e inicialização do spinner.
         botao()
         botaoConfirma()
         listaDeMaquinasLista()
@@ -39,39 +42,49 @@ class inserirImpressao : AppCompatActivity() {
     }
 
 
+    // Método para configurar a ação do botão de retornar à tela inicial.
     private fun botao() {
         val botaoTelaInicial: Button = findViewById(R.id.botaoTelaInicial)
         botaoTelaInicial.setOnClickListener {
+            // Cria uma intenção para abrir a Activity menuImpressao.
             intent = Intent(this, menuImpressao::class.java)
+            // Inicia a Activity.
             startActivity(intent)
         }
     }
 
+
+    // Método para salvar os dados inseridos pelo usuário.
     private fun botaoConfirma() {
-        //Usando o getSharedPreferences para modificar e guardar os dados digitados
+        // Acesso ao sistema SharedPreferences para guardar os dados.
         val preferences = getSharedPreferences("SharedPreferences", Context.MODE_PRIVATE)
         val editor = preferences.edit()
 
-        //Aplicando a lógica pra quando o usuário apertar em confirmar para obter os dados
         botaoConfirma.setOnClickListener {
+            // Obtém os valores digitados pelo usuário.
             val funcionarioDigitado = editTextFuncionario.text.toString()
-            editor.putString("funcionarioNovo", funcionarioDigitado)
-            editor.apply()
-
             val produtoDigitado = editTextProduto.text.toString()
-            editor.putString("produtoNovo", produtoDigitado)
+            // Obtém a máquina selecionada no Spinner.
+            val maquinaEscolhida = selecionarMaquina.selectedItem.toString()
+
+            // Salva os dados específicos para a máquina escolhida no SharedPreferences.
+            val maquinaIndex = maquinaEscolhida.replace("Máquina ", "")
+            editor.putString("funcionarioMaquina$maquinaIndex", funcionarioDigitado)
+            editor.putString("produtoMaquina$maquinaIndex", produtoDigitado)
             editor.apply()
 
-            val maquinaEscolhida = selecionarMaquina.selectedItem.toString()
-            editor.putString("maquinaEscolhida", maquinaEscolhida)
-            editor.apply()
-//
+            // Exibe uma mensagem para o usuário indicando que os dados foram salvos.
+            Toast.makeText(this, "Dados salvos para $maquinaEscolhida", Toast.LENGTH_SHORT).show()
         }
     }
 
+    // Método para inicializar o Spinner com a lista de máquinas.
     private fun listaDeMaquinasLista() {
-        val listaMaquinas = arrayOf("Selecione a maquina", "1", "2", "3", "4", "5", "6")
+        // Define a lista de opções para o Spinner.
+        val listaMaquinas = arrayOf("Selecione a maquina", "Máquina 1", "Máquina 2", "Máquina 3", "Máquina 4", "Máquina 5", "Máquina 6")
+        // Cria um ArrayAdapter para exibir as opções no Spinner.
         val adaptar = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, listaMaquinas)
+        // Configura o ArrayAdapter no Spinner.
         selecionarMaquina.setAdapter(adaptar)
     }
 

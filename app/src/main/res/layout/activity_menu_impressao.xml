@@ -118,6 +118,7 @@
             />
 
 
+
         <ImageView
             android:id="@+id/imagem"
             android:layout_width="80dp"
@@ -275,7 +276,7 @@
             app:layout_constraintTop_toBottomOf="@id/view3" />
 
         <TextView
-            android:id="@+id/protudoTeste4"
+            android:id="@+id/produto4"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
@@ -301,7 +302,7 @@
             app:layout_constraintBottom_toTopOf="@id/maquina4"
             app:layout_constraintEnd_toEndOf="@id/view4"
             app:layout_constraintStart_toEndOf="@id/imagem4"
-            app:layout_constraintTop_toBottomOf="@id/protudoTeste4"
+            app:layout_constraintTop_toBottomOf="@id/produto4"
 
             />
 
@@ -344,7 +345,7 @@
             app:layout_constraintTop_toBottomOf="@id/view4" />
 
         <TextView
-            android:id="@+id/protudoTeste5"
+            android:id="@+id/produto5"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
@@ -370,7 +371,7 @@
             app:layout_constraintBottom_toTopOf="@id/maquina5"
             app:layout_constraintEnd_toEndOf="@id/view5"
             app:layout_constraintStart_toEndOf="@id/imagem5"
-            app:layout_constraintTop_toBottomOf="@id/protudoTeste5"
+            app:layout_constraintTop_toBottomOf="@id/produto5"
 
             />
 
@@ -415,7 +416,7 @@
             app:layout_constraintTop_toBottomOf="@id/view5" />
 
         <TextView
-            android:id="@+id/protudoTeste6"
+            android:id="@+id/produto6"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
@@ -439,7 +440,7 @@
             app:layout_constraintBottom_toTopOf="@id/maquina6"
             app:layout_constraintEnd_toEndOf="@id/view6"
             app:layout_constraintStart_toEndOf="@id/imagem6"
-            app:layout_constraintTop_toBottomOf="@id/protudoTeste6" />
+            app:layout_constraintTop_toBottomOf="@id/produto6" />
 
         <TextView
             android:id="@+id/maquina6"
