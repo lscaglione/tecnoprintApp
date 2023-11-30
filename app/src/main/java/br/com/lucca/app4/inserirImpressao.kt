@@ -44,29 +44,28 @@ class inserirImpressao : AppCompatActivity() {
 
     // Método para salvar os dados inseridos pelo usuário.
     private fun botaoConfirma() {
-        // Acesso ao sistema SharedPreferences para guardar os dados.
         val preferences = getSharedPreferences("SharedPreferences", Context.MODE_PRIVATE)
         val editor = preferences.edit()
 
         botaoConfirma.setOnClickListener {
-            // Obtém os valores digitados pelo usuário.
             val produtoDigitado = editTextProduto.text.toString()
-            // Obtém a máquina e o funcionario selecionada no Spinner.
-            val funcionarioDigitado = selecionarFuncionario.selectedItem.toString()
+            val funcionarioSelecionado = selecionarFuncionario.selectedItem.toString()
             val maquinaEscolhida = selecionarMaquina.selectedItem.toString()
-
-            // Salva os dados específicos para a máquina escolhida no SharedPreferences.
             val maquinaIndex = maquinaEscolhida.replace("Máquina ", "")
-            editor.putString("funcionarioMaquina$maquinaIndex", funcionarioDigitado)
+
+            // Verifica se o funcionário selecionado é diferente da opção padrão.
+            if (funcionarioSelecionado != "Selecione o funcionário") {
+                editor.putString("funcionarioMaquina$maquinaIndex", funcionarioSelecionado)
+            }
+
             editor.putString("produtoMaquina$maquinaIndex", produtoDigitado)
             editor.apply()
 
-
-            // Exibe uma mensagem para o usuário indicando que os dados foram salvos.
             Toast.makeText(this, "Dados salvos para $maquinaEscolhida", Toast.LENGTH_SHORT).show()
-
         }
     }
+
+
 
     // Método para inicializar o Spinner com a lista de máquinas.
     private fun listaDeMaquinasLista() {
