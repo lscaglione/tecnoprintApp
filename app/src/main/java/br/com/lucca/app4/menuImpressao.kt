@@ -10,6 +10,12 @@ import org.w3c.dom.Text
 
 class menuImpressao : AppCompatActivity() {
 
+    override fun onResume() {
+        super.onResume()
+        // Atualiza os dados toda vez que a Activity é retomada.
+        atualizarDados()
+    }
+
     // Este método é chamado quando a Activity é criada.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +23,7 @@ class menuImpressao : AppCompatActivity() {
 
         // Chamada de métodos para inicializar os botões e atualizar dados.
         botoes()
-        atualizarDados()
+
 
     }
 

@@ -20,20 +20,21 @@
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@id/linha1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/linha2"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/botaoMenuCorte"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:text="Menu de Cortes"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@id/tituloImpressao"
-            app:layout_constraintEnd_toStartOf="@id/linha2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tituloImpressao" />
+            app:layout_constraintBottom_toBottomOf="@id/botaoInserirImpressao"
+            app:layout_constraintEnd_toStartOf="@id/botaoInserirCorte"
+            app:layout_constraintStart_toEndOf="@id/botaoInserirImpressao"
+            app:layout_constraintTop_toTopOf="@id/botaoInserirImpressao" />
 
         <View
             android:id="@+id/linha1"
@@ -44,18 +45,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tituloImpressao" />
-
-        <View
-            android:id="@+id/linha2"
-            android:layout_width="1dp"
-            android:layout_height="80dp"
-            android:background="#C0BEBE"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/linha1"
-
-            />
 
 
         <View
@@ -467,25 +456,25 @@
 
         <Button
             android:id="@+id/botaoInserirImpressao"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="Inserir Impressao"
             android:textColor="@color/black"
             android:backgroundTint="@color/white"
             app:layout_constraintTop_toBottomOf="@id/view6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/botaoInserirCorte"
+            app:layout_constraintEnd_toStartOf="@id/botaoMenuCorte"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <Button
             android:id="@+id/botaoInserirCorte"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="Inserir Corte"
             android:textColor="@color/black"
             android:backgroundTint="@color/white"
             app:layout_constraintTop_toTopOf="@id/botaoInserirImpressao"
-            app:layout_constraintStart_toEndOf="@id/botaoInserirImpressao"
+            app:layout_constraintStart_toEndOf="@id/botaoMenuCorte"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/botaoInserirImpressao"/>
 
