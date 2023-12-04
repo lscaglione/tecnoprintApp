@@ -1,262 +1,370 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#01040c"
     tools:context=".menuCorte">
 
 
-    <View
-        android:id="@+id/menuCorte"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/rounded_background"
-        app:layout_constraintBottom_toTopOf="@id/linhaDivisoria"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/linhaDivisoria"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:background="@color/blue_claro"
-        app:layout_constraintBottom_toTopOf="@id/funcionarioCorte1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/menuCorte" />
-
-    <TextView
-        android:id="@+id/titulo"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CORTES"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="@id/menuCorte"
-        app:layout_constraintEnd_toEndOf="@id/menuCorte"
-        app:layout_constraintStart_toStartOf="@id/menuCorte"
-        app:layout_constraintTop_toTopOf="@id/menuCorte" />
+        android:layout_height="wrap_content">
 
 
-    <TextView
-        android:id="@+id/funcionarioCorte1"
-        style="@style/TextViewStyle"
-        android:text="Funcionario corte 1"
-        app:layout_constraintTop_toBottomOf="@id/linhaDivisoria"
-        app:layout_constraintBottom_toTopOf="@id/produtoCorte1"
-        app:layout_constraintHorizontal_bias="0.5"
-        />
-
-    <TextView
-        android:id="@+id/produtoCorte1"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto1"
-        app:layout_constraintTop_toBottomOf="@id/funcionarioCorte1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/produtoCorte2"
-        app:layout_constraintBottom_toTopOf="@id/produtoCorte5"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="3dp"
+        <TextView
+            android:id="@+id/tituloCortes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="CORTES"
+            android:textColor="#a7a9b0"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toTopOf="@id/linha"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
 
 
-        />
-    <TextView
-        android:id="@+id/produtoCorte2"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto2"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte1"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte1"
-        app:layout_constraintEnd_toStartOf="@id/produtoCorte3"
+            />
 
-        />
-    <TextView
-        android:id="@+id/produtoCorte3"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto3"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte1"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte2"
-        app:layout_constraintEnd_toEndOf="@id/produtoCorte3"
-        />
-    <TextView
-        android:id="@+id/produtoCorte4"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto4"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte1"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte3"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        />
-
-    <TextView
-        android:id="@+id/produtoCorte5"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto5"
-        app:layout_constraintTop_toBottomOf="@id/produtoCorte1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/produtoCorte6"
-        app:layout_constraintBottom_toTopOf="@id/funcionarioCorte2"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="3dp"
-
-        />
-
-    <TextView
-        android:id="@+id/produtoCorte6"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto6"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte5"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte5"
-        app:layout_constraintEnd_toStartOf="@id/produtoCorte7"
-        />
-
-    <TextView
-        android:id="@+id/produtoCorte7"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto7"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte5"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte6"
-        app:layout_constraintEnd_toStartOf="@id/produtoCorte8"
-
-        />
-
-    <TextView
-        android:id="@+id/produtoCorte8"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto8"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte5"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte7"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        />
+        <View
+            android:id="@+id/linha"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="#C0BEBE"
+            app:layout_constraintBottom_toTopOf="@id/view1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tituloCortes" />
 
 
-    <TextView
-        android:id="@+id/funcionarioCorte2"
-        style="@style/TextViewStyle"
-        android:text="Funcionario corte 2"
-        app:layout_constraintTop_toBottomOf="@id/produtoCorte5"
-        app:layout_constraintHorizontal_bias="0.5"
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_backgournd_white_black"
+            android:backgroundTint="#191c25"
+            app:layout_constraintBottom_toTopOf="@id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linha" />
 
-        />
-
-    <TextView
-        android:id="@+id/produtoCorte9"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto9"
-        app:layout_constraintTop_toBottomOf="@id/funcionarioCorte2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/produtoCorte10"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="3dp"
-
-
-
-        />
-    <TextView
-        android:id="@+id/produtoCorte10"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto10"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte9"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte9"
-        app:layout_constraintEnd_toStartOf="@id/produtoCorte11"
+        <TextView
+            android:id="@+id/funcionarioCorte1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Funcionario Corte 1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/produtoCorte1"
+            app:layout_constraintEnd_toEndOf="@id/view1"
+            app:layout_constraintStart_toStartOf="@id/view1"
+            app:layout_constraintTop_toTopOf="@id/view1"
 
 
+            />
 
-        />
-    <TextView
-        android:id="@+id/produtoCorte11"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto11"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte9"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte10"
-        app:layout_constraintEnd_toStartOf="@id/produtoCorte12"
+        <TextView
+            android:id="@+id/produtoCorte1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="monospace"
+            android:text="Produto"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/produtoCorte5"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte2"
+            app:layout_constraintStart_toStartOf="@id/view1"
+            app:layout_constraintTop_toBottomOf="@id/funcionarioCorte1"
 
-        />
-    <TextView
-        android:id="@+id/produtoCorte12"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto12"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte9"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte11"
-        app:layout_constraintEnd_toEndOf="parent"
+            />
 
-        />
+        <TextView
+            android:id="@+id/produtoCorte2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Produto"
+            android:fontFamily="monospace"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte3"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte1"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte1"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte1"
+            android:textSize="20sp"
 
+            />
 
-    <TextView
-        android:id="@+id/produtoCorte13"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto13"
-        app:layout_constraintTop_toBottomOf="@id/produtoCorte9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/produtoCorte14"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="3dp"
-
-        />
-
-    <TextView
-        android:id="@+id/produtoCorte14"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto14"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte13"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte13"
-        app:layout_constraintEnd_toStartOf="@id/produtoCorte15"
-
-        />
-
-    <TextView
-        android:id="@+id/produtoCorte15"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto15"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte13"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte14"
-        app:layout_constraintEnd_toEndOf="@id/produtoCorte16"
-
-        />
-
-    <TextView
-        android:id="@+id/produtoCorte16"
-        android:layout_width="100dp"
-        style="@style/TextViewStyleCortes"
-        android:text="Produto16"
-        app:layout_constraintTop_toTopOf="@id/produtoCorte13"
-        app:layout_constraintStart_toEndOf="@id/produtoCorte15"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        />
-
-    <Button
-        android:id="@+id/botaTelaInicialCorteParaMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tela Inicial"
-        app:layout_constraintTop_toBottomOf="@id/produtoCorte13"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="@color/blue"
-        />
+        <TextView
+            android:id="@+id/produtoCorte3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Produto"
+            android:fontFamily="monospace"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte4"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte2"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte1"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte1"
+            android:textSize="20sp"/>
 
 
+        <TextView
+            android:id="@+id/produtoCorte4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Produto"
+            android:fontFamily="monospace"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="@id/view2"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte3"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte1"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte1"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/produtoCorte5"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Produto"
+            android:fontFamily="monospace"
+            app:layout_constraintBottom_toBottomOf="@id/view1"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte6"
+            app:layout_constraintStart_toStartOf="@id/view1"
+            app:layout_constraintTop_toBottomOf="@id/produtoCorte1"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/produtoCorte6"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Produto"
+            android:fontFamily="monospace"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte7"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte5"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte5"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte5"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/produtoCorte7"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="monospace"
+            android:text="Produto"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte8"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte6"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte5"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte5"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/produtoCorte8"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="monospace"
+            android:text="Produto"
+            app:layout_constraintEnd_toEndOf="@id/view1"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte7"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte5"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte5"
+            android:textSize="20sp"
+
+            />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="monospace"
+            android:background="@drawable/rounded_backgournd_white_black"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="#191c25"
+            app:layout_constraintBottom_toTopOf="@id/botaTelaInicialCorteParaMenu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view1" />
 
 
+        <TextView
+            android:id="@+id/funcionarioCorte2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Funcionario Corte 2"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/view2"
+            app:layout_constraintStart_toStartOf="@id/view2"
+            app:layout_constraintEnd_toEndOf="@id/view2"
+            app:layout_constraintBottom_toTopOf="@id/produtoCorte9"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            />
+
+        <TextView
+            android:id="@+id/produtoCorte9"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Produto"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte10"
+            app:layout_constraintStart_toStartOf="@id/view2"
+            app:layout_constraintTop_toBottomOf="@id/funcionarioCorte2"
+            app:layout_constraintBottom_toTopOf="@id/produtoCorte13"
+            android:textSize="20sp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/produtoCorte10"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:fontFamily="monospace"
+            android:text="Produto"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte11"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte9"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte9"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte9"
+            android:textSize="20sp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/produtoCorte11"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textAlignment="center"
+            android:text="Produto"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte12"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte10"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte9"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte9"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/produtoCorte12"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textAlignment="center"
+            android:text="Produto"
+            app:layout_constraintEnd_toEndOf="@id/view2"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte11"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte9"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte9"
+            android:textSize="20sp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/produtoCorte13"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Produto"
+            android:fontFamily="monospace"
+            app:layout_constraintBottom_toBottomOf="@id/view2"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte14"
+            app:layout_constraintStart_toStartOf="@id/view2"
+            app:layout_constraintTop_toBottomOf="@id/produtoCorte9"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/produtoCorte14"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textAlignment="center"
+            android:text="Produto"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte15"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte13"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte13"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte13"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/produtoCorte15"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textAlignment="center"
+            android:text="Produto"
+            app:layout_constraintEnd_toStartOf="@id/produtoCorte16"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte14"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte13"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte13"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/produtoCorte16"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textAlignment="center"
+            android:text="Produto"
+            app:layout_constraintEnd_toEndOf="@id/view2"
+            app:layout_constraintStart_toEndOf="@id/produtoCorte15"
+            app:layout_constraintTop_toTopOf="@id/produtoCorte13"
+            app:layout_constraintBottom_toBottomOf="@id/produtoCorte13"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/botaTelaInicialCorteParaMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:fontFamily="monospace"
+            android:text="Menu Impressão"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            android:layout_marginTop="50dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 
 
