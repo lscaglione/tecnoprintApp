@@ -48,12 +48,13 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="5dp"
-            android:layout_marginTop="30dp"
             android:background="@drawable/rounded_backgournd_white_black"
             android:backgroundTint="#191c25"
             app:layout_constraintBottom_toTopOf="@id/view2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linha" />
 
@@ -67,12 +68,26 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/produtoCorte1"
+            app:layout_constraintBottom_toTopOf="@id/maquinaCorte1"
             app:layout_constraintEnd_toEndOf="@id/view1"
             app:layout_constraintStart_toStartOf="@id/view1"
             app:layout_constraintTop_toTopOf="@id/view1"
 
 
+            />
+
+        <TextView
+            android:id="@+id/maquinaCorte1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Máquina 1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/funcionarioCorte1"
+            app:layout_constraintStart_toStartOf="@id/view1"
+            app:layout_constraintEnd_toEndOf="@id/view2"
+            app:layout_constraintBottom_toTopOf="@id/produtoCorte1"
             />
 
         <TextView
@@ -87,7 +102,7 @@
             app:layout_constraintBottom_toTopOf="@id/produtoCorte5"
             app:layout_constraintEnd_toStartOf="@id/produtoCorte2"
             app:layout_constraintStart_toStartOf="@id/view1"
-            app:layout_constraintTop_toBottomOf="@id/funcionarioCorte1"
+            app:layout_constraintTop_toBottomOf="@id/maquinaCorte1"
 
             />
 
@@ -223,8 +238,22 @@
             app:layout_constraintTop_toTopOf="@id/view2"
             app:layout_constraintStart_toStartOf="@id/view2"
             app:layout_constraintEnd_toEndOf="@id/view2"
-            app:layout_constraintBottom_toTopOf="@id/produtoCorte9"
+            app:layout_constraintBottom_toTopOf="@id/maquinaCorte2"
 
+            />
+
+        <TextView
+            android:id="@+id/maquinaCorte2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Máquina 2"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/funcionarioCorte2"
+            app:layout_constraintStart_toStartOf="@id/view2"
+            app:layout_constraintEnd_toEndOf="@id/view2"
+            app:layout_constraintBottom_toTopOf="@id/produtoCorte9"
             />
 
         <TextView
@@ -236,7 +265,7 @@
             android:textAlignment="center"
             app:layout_constraintEnd_toStartOf="@id/produtoCorte10"
             app:layout_constraintStart_toStartOf="@id/view2"
-            app:layout_constraintTop_toBottomOf="@id/funcionarioCorte2"
+            app:layout_constraintTop_toBottomOf="@id/maquinaCorte2"
             app:layout_constraintBottom_toTopOf="@id/produtoCorte13"
             android:textSize="20sp"
 

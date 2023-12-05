@@ -229,7 +229,5 @@
             app:layout_constraintTop_toBottomOf="@id/viewInserirCorte" />
 
 
-        />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
