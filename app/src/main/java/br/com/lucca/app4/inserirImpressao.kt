@@ -34,10 +34,13 @@ class inserirImpressao : AppCompatActivity() {
         botaoConfirma = findViewById(R.id.botaoConfirmar)
         selecionarMaquina = findViewById(R.id.selecionarMaquina)
 
-        // Chamadas de métodos para a funcionalidade dos botões e inicialização do spinner.
+
+
         botaoConfirma()
         listaDeFuncionarios()
         listaDeMaquinasLista()
+
+
 
 
     }
