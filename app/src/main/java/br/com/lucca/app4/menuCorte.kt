@@ -2,6 +2,7 @@ package br.com.lucca.app4
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -22,6 +23,7 @@ class menuCorte : AppCompatActivity() {
 
 
         botaoMenuImpressao()
+        atualizarDadosCorte()
 
     }
 
@@ -34,85 +36,40 @@ class menuCorte : AppCompatActivity() {
             startActivity(intent)
 
         }
-
-
     }
 
-    fun atualizarDadosCorte() {
+    private fun atualizarDadosCorte() {
         val preferences = getSharedPreferences("SharedPreferencesCortes", Context.MODE_PRIVATE)
 
-        val maquinaEscolhida = preferences.getString("maquinaCorte", "")
+        // Atualizar para Máquina 1
+        atualizarDadosMaquina(
+            preferences, "maquina1_", listOf(
+                R.id.produtoCorte1, R.id.produtoCorte2, R.id.produtoCorte3, R.id.produtoCorte4,
+                R.id.produtoCorte5, R.id.produtoCorte6, R.id.produtoCorte7, R.id.produtoCorte8
+            )
+        )
 
-        val produtoCorteSelecionado1 = preferences.getString("produtoCorte1", "")
-        val produtoCorteSelecionado2 = preferences.getString("produtoCorte2", "")
-        val produtoCorteSelecionado3 = preferences.getString("produtoCorte3", "")
-        val produtoCorteSelecionado4 = preferences.getString("produtoCorte4", "")
-        val produtoCorteSelecionado5 = preferences.getString("produtoCorte5", "")
-        val produtoCorteSelecionado6 = preferences.getString("produtoCorte6", "")
-        val produtoCorteSelecionado7 = preferences.getString("produtoCorte7", "")
-        val produtoCorteSelecionado8 = preferences.getString("produtoCorte8", "")
-
-        val produtoCorteSelecionado9 = preferences.getString("produtoCorte9", "")
-        val produtoCorteSelecionado10 = preferences.getString("produtoCorte10", "")
-        val produtoCorteSelecionado11 = preferences.getString("produtoCorte11", "")
-        val produtoCorteSelecionado12 = preferences.getString("produtoCorte12", "")
-        val produtoCorteSelecionado13 = preferences.getString("produtoCorte13", "")
-        val produtoCorteSelecionado14 = preferences.getString("produtoCorte14", "")
-        val produtoCorteSelecionado15 = preferences.getString("produtoCorte15", "")
-        val produtoCorteSelecionado16 = preferences.getString("produtoCorte16", "")
-
-        if (maquinaEscolhida == "Máquina 1") {
-
-            findViewById<TextView?>(R.id.produtoCorte1).text = produtoCorteSelecionado1
-
-
-            findViewById<TextView?>(R.id.produtoCorte2).text = produtoCorteSelecionado2
-
-
-            findViewById<TextView?>(R.id.produtoCorte3).text = produtoCorteSelecionado3
-
-
-            findViewById<TextView?>(R.id.produtoCorte4).text = produtoCorteSelecionado4
-
-
-            findViewById<TextView?>(R.id.produtoCorte5).text = produtoCorteSelecionado5
-
-
-            findViewById<TextView?>(R.id.produtoCorte6).text = produtoCorteSelecionado6
-
-
-            findViewById<TextView?>(R.id.produtoCorte7).text = produtoCorteSelecionado7
-
-
-            findViewById<TextView?>(R.id.produtoCorte8).text = produtoCorteSelecionado8
-
-        } else if (maquinaEscolhida == "Máquina 2") {
-
-            findViewById<TextView?>(R.id.produtoCorte9).text = produtoCorteSelecionado9
-
-
-            findViewById<TextView?>(R.id.produtoCorte10).text = produtoCorteSelecionado10
-
-
-            findViewById<TextView?>(R.id.produtoCorte11).text = produtoCorteSelecionado11
-
-
-            findViewById<TextView?>(R.id.produtoCorte12).text = produtoCorteSelecionado12
-
-
-            findViewById<TextView?>(R.id.produtoCorte13).text = produtoCorteSelecionado13
-
-
-            findViewById<TextView?>(R.id.produtoCorte14).text = produtoCorteSelecionado14
-
-
-            findViewById<TextView?>(R.id.produtoCorte15).text = produtoCorteSelecionado15
-
-
-            findViewById<TextView?>(R.id.produtoCorte16).text = produtoCorteSelecionado16
-
-        }
-
-
+        // Atualizar para Máquina 2
+        atualizarDadosMaquina(
+            preferences, "maquina2_", listOf(
+                R.id.produtoCorte9, R.id.produtoCorte10, R.id.produtoCorte11, R.id.produtoCorte12,
+                R.id.produtoCorte13, R.id.produtoCorte14, R.id.produtoCorte15, R.id.produtoCorte16
+            )
+        )
     }
+
+    private fun atualizarDadosMaquina(
+        preferences: SharedPreferences,
+        prefixo: String,
+        textViews: List<Int>
+    ) {
+        for (i in 1..8) {
+            val corte = preferences.getString("${prefixo}produtoCorte$i", "")
+            findViewById<TextView>(textViews[i - 1]).text = corte
+        }
+    }
+
+
+
+
 }

@@ -40,100 +40,73 @@ class inserirCorte : AppCompatActivity() {
         selecionarProdutoCorte8 = findViewById(R.id.inserirProdutoCorte8)
         botaoConfirma = findViewById(R.id.botaoConfirmarCorte1)
 
-        listaDeMaquinasCorte()
         botaoConfirma()
-
+        listaDeMaquinasCorte()
 
 
     }
 
-    private fun botaoConfirma(){
+    private fun botaoConfirma() {
         val preferences = getSharedPreferences("SharedPreferencesCortes", Context.MODE_PRIVATE)
         val editor = preferences.edit()
 
         botaoConfirma.setOnClickListener {
-            val maquinaSelecionadaCorte = selecionarMaquinaCorte.selectedItem.toString()
-            editor.putString("maquinaCorte", maquinaSelecionadaCorte)
-            editor.apply()
 
-            if (maquinaSelecionadaCorte == "Máquina 1") {
-            val corteSelecionado1 = selecionarProdutoCorte1.text.toString()
-            editor.putString("produtoCorte1", corteSelecionado1)
-            editor.apply()
-
-            val corteSelecionado2 = selecionarProdutoCorte2.text.toString()
-            editor.putString("produtoCorte2", corteSelecionado2)
-            editor.apply()
-
-            val corteSelecionado3 = selecionarProdutoCorte3.text.toString()
-            editor.putString("produtoCorte3", corteSelecionado3)
-            editor.apply()
-
-            val corteSelecionado4 = selecionarProdutoCorte4.text.toString()
-            editor.putString("produtoCorte4", corteSelecionado4)
-            editor.apply()
-
-            val corteSelecionado5 = selecionarProdutoCorte5.text.toString()
-            editor.putString("produtoCorte5", corteSelecionado5)
-            editor.apply()
-
-            val corteSelecionado6 = selecionarProdutoCorte6.text.toString()
-            editor.putString("produtoCorte6", corteSelecionado6)
-            editor.apply()
-
-            val corteSelecionado7 = selecionarProdutoCorte7.text.toString()
-            editor.putString("produtoCorte7", corteSelecionado7)
-            editor.apply()
-
-            val corteSelecionado8 = selecionarProdutoCorte8.text.toString()
-            editor.putString("produtoCorte8", corteSelecionado8)
-            editor.apply()
-            } else if (maquinaSelecionadaCorte == "Máquina 2"){
-                val corteSelecionado9 = selecionarProdutoCorte1.text.toString()
-                editor.putString("produtoCorte9", corteSelecionado9)
-                editor.apply()
-
-                val corteSelecionado10 = selecionarProdutoCorte2.text.toString()
-                editor.putString("produtoCorte10", corteSelecionado10)
-                editor.apply()
-
-                val corteSelecionado11 = selecionarProdutoCorte3.text.toString()
-                editor.putString("produtoCorte11", corteSelecionado11)
-                editor.apply()
-
-                val corteSelecionado12 = selecionarProdutoCorte4.text.toString()
-                editor.putString("produtoCorte12", corteSelecionado12)
-                editor.apply()
-
-                val corteSelecionado13 = selecionarProdutoCorte5.text.toString()
-                editor.putString("produtoCorte13", corteSelecionado13)
-                editor.apply()
-
-                val corteSelecionado14 = selecionarProdutoCorte6.text.toString()
-                editor.putString("produtoCorte14", corteSelecionado14)
-                editor.apply()
-
-                val corteSelecionado15 = selecionarProdutoCorte7.text.toString()
-                editor.putString("produtoCorte15", corteSelecionado15)
-                editor.apply()
-
-                val corteSelecionado16 = selecionarProdutoCorte8.text.toString()
-                editor.putString("produtoCorte16", corteSelecionado16)
-                editor.apply()
-
+            val maquinaCorteSelecionada = selecionarMaquinaCorte.selectedItem.toString()
+            val prefixo = when (maquinaCorteSelecionada) {
+                "Máquina 1" -> "maquina1_"
+                "Máquina 2" -> "maquina2_"
+                else -> ""
             }
 
-            Toast.makeText(this, "Cortes atualizados", Toast.LENGTH_SHORT).show()
+            editor.putString("maquinaAtual", maquinaCorteSelecionada)
 
-            val intent = Intent(this, menuCorte::class.java)
-            startActivity(intent)
+            if (maquinaCorteSelecionada != "Selecione a maquina") {
+
+                val corteSelecionado1 = selecionarProdutoCorte1.text.toString()
+                editor.putString("${prefixo}produtoCorte1", corteSelecionado1)
+
+                val corteSelecionado2 = selecionarProdutoCorte2.text.toString()
+                editor.putString("${prefixo}produtoCorte2", corteSelecionado2)
+
+                val corteSelecionado3 = selecionarProdutoCorte3.text.toString()
+                editor.putString("${prefixo}produtoCorte3", corteSelecionado3)
+
+                val corteSelecionado4 = selecionarProdutoCorte4.text.toString()
+                editor.putString("${prefixo}produtoCorte4", corteSelecionado4)
+
+                val corteSelecionado5 = selecionarProdutoCorte5.text.toString()
+                editor.putString("${prefixo}produtoCorte5", corteSelecionado5)
+
+                val corteSelecionado6 = selecionarProdutoCorte6.text.toString()
+                editor.putString("${prefixo}produtoCorte6", corteSelecionado6)
+
+                val corteSelecionado7 = selecionarProdutoCorte7.text.toString()
+                editor.putString("${prefixo}produtoCorte7", corteSelecionado7)
+
+                val corteSelecionado8 = selecionarProdutoCorte8.text.toString()
+                editor.putString("${prefixo}produtoCorte8", corteSelecionado8)
+
+                editor.apply()
+
+                Toast.makeText(this, "Selecionado a ${maquinaCorteSelecionada}", Toast.LENGTH_SHORT)
+                    .show()
+
+                val intent = Intent(this, menuCorte::class.java)
+                startActivity(intent)
+
+
+            } else {
+
+                Toast.makeText(this, "Selecione a máquina!", Toast.LENGTH_SHORT).show()
+            }
 
 
         }
 
     }
 
-    private fun listaDeMaquinasCorte (){
+    private fun listaDeMaquinasCorte() {
         val listaMaquinasCorte = arrayOf(
             "Selecione a maquina",
             "Máquina 1",
